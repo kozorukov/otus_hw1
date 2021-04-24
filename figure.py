@@ -1,10 +1,14 @@
 import math
 
-
 class Figure:
     def __init__(self, name, angles):
         self.name = name
         self.angles = angles
+
+    def add_area(self, figure):
+        if not isinstance(figure, Figure):
+            raise ValueError("Can't be summed!")
+        return self.area() + figure.area()
 
     def my_name(self):
         print(f"My name's {self.name}!")
@@ -51,7 +55,6 @@ class Rectangle(Figure):
         return s
 
 
-
 class Square(Figure):
     def __init__(self, name, a):
         super().__init__(name, 4)
@@ -82,6 +85,3 @@ class Circle(Figure):
         p = 2 * math.pi * self.r
         print(f"Perimeter = {p}!")
         return p
-
-
-

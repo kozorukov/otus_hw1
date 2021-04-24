@@ -16,6 +16,7 @@ def my_rectangle():
 def my_square():
     return Square(name="SomeSq", a=7)
 
+
 @pytest.fixture
 def my_circle():
     return Circle(name="SomeCircle", r=3)

@@ -15,6 +15,9 @@ def test_tr_angles(my_triangle):
 def test_tr_name(my_triangle):
     assert my_triangle.my_name() == "SomeTr"
 
+def test_tr_add_area(my_triangle, my_rectangle):
+    assert my_triangle.add_area(my_rectangle) == 47
+
 
 # Прямоугольники
 
@@ -33,6 +36,11 @@ def test_rec_angles(my_rectangle):
 def test_rec_name(my_rectangle):
     assert my_rectangle.my_name() == "SomeRec"
 
+
+def test_rec_add_area(my_rectangle, my_triangle):
+    assert my_rectangle.add_area(my_triangle) == 47
+
+
 # Квадраты
 
 def test_sq_perimeter(my_square):
@@ -49,6 +57,9 @@ def test_sq_angles(my_square):
 
 def test_sq_name(my_square):
     assert my_square.my_name() == "SomeSq"
+
+def test_sq_add_area(my_square, my_circle):
+    assert my_square.add_area(my_circle) == 77
 
 
 # Окружности
@@ -67,3 +78,7 @@ def test_circle_angles(my_circle):
 
 def test_circle_name(my_circle):
     assert my_circle.my_name() == "SomeCircle"
+
+def test_circle_add_area(my_circle, my_rectangle):
+    assert my_circle.add_area(my_rectangle) == 63
+
